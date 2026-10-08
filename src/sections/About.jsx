@@ -34,12 +34,12 @@ export const About = () => {
           {/* Left Column */}
           <div className="space-y-8">
             <div className="animate-fade-in">
-              <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase">
+              <span className="text-primary text-sm font-medium tracking-wider uppercase">
                 About Me
               </span>
             </div>
 
-            <h2 className="text-4xl md:text-5xl font-bold leading-tight animate-fade-in animation-delay-100 text-secondary-foreground">
+            <h2 className="text-4xl md:text-5xl font-bold leading-tight animate-fade-in animation-delay-100 text-primary">
               Building the future,
               <span className="font-serif italic font-normal text-white">
                 {" "}
@@ -75,7 +75,7 @@ export const About = () => {
               </p>
             </div>
 
-            <div className="glass rounded-2xl p-6 glow-border animate-fade-in animation-delay-300">
+            <div className="glass rounded-2xl p-6 glow-border-primary animate-fade-in animation-delay-300">
               <p className="text-lg font-medium italic text-foreground">
                 "My mission is to create digital experiences that are not just
                 functional, but truly delightful — products that users love to

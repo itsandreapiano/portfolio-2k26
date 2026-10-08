@@ -57,7 +57,7 @@ export const Hero = () => {
             key={dot.id}
             className="absolute w-1.5 h-1.5 rounded-full opacity-60"
             style={{
-              backgroundColor: "#20B2A6",
+              backgroundColor: "#10b981",
               left: dot.left,
               top: dot.top,
               animation: `slow-drift ${dot.duration}s ease-in-out infinite`,
@@ -73,8 +73,8 @@ export const Hero = () => {
           {/* Left Column - Text Content */}
           <div className="space-y-8">
             <div className="animate-fade-in">
-              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary">
-                <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
+              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-analytics">
+                <span className="w-2 h-2 bg-analytics rounded-full animate-pulse" />
                 Digital Solutions Professional
               </span>
             </div>
@@ -82,8 +82,8 @@ export const Hero = () => {
             {/* Headline */}
             <div className="space-y-4">
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100">
-                No problems. <br />
-                Only <span className="text-primary glow-text">innovative</span>
+                No problems, <br />
+                only <span className="text-primary glow-text">innovative</span>
                 <br />
                 <span className="font-serif italic font-normal text-white">
                   solutions.
@@ -136,7 +136,7 @@ export const Hero = () => {
               from-primary/30 via-transparent 
               to-primary/10 blur-2xl animate-pulse"
               />
-              <div className="relative glass rounded-3xl p-2 glow-border">
+              <div className="relative glass rounded-3xl p-2 glow-border-primary">
                 <img
                   src="/profile-photo.png"
                   alt="Andrea Piano"
@@ -153,12 +153,12 @@ export const Hero = () => {
                   </div>
                 </div>
                 {/* Stats Badge */}
-                <div className="absolute -top-4 -left-4 glass rounded-xl px-4 py-3 animate-float animation-delay-500">
-                  <div className="text-2xl font-bold text-primary">4+</div>
+                {/* <div className="absolute -top-4 -left-4 glass rounded-xl px-4 py-3 animate-float animation-delay-500">
+                  <div className="text-2xl font-bold text-analytics">4+</div>
                   <div className="text-xs text-muted-foreground">
                     Years Exp.
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

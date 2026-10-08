@@ -6,7 +6,7 @@
 
   --color-card: #141a1f;
 
-  --color-primary: #20b2a6;
+  --color-primary: #4286f2;
   --color-primary-foreground: #ffffff;
 
   --color-secondary: #1f2830;
@@ -16,6 +16,11 @@
   --color-muted-foreground: #7a8491;
 
   --color-border: #242b32;
+
+  --color-creativity: #f59e0b;
+  --color-analytics: #10b981;
+  --color-business: #f43f5e;
+  --color-digital: #8b5cf6;
 
   --radius: 0.75rem;
 
@@ -61,10 +66,16 @@
       color-mix(in srgb, var(--color-primary) 50%, transparent);
   }
 
-  .glow-border {
-    box-shadow: 0 0 20px
-        color-mix(in srgb, var(--color-primary) 20%, transparent),
+  .glow-border-primary {
+    box-shadow:
+      0 0 20px color-mix(in srgb, var(--color-primary) 20%, transparent),
       inset 0 0 20px color-mix(in srgb, var(--color-primary) 5%, transparent);
+  }
+
+  .glow-border-analytics {
+    box-shadow:
+      0 0 20px color-mix(in srgb, var(--color-analytics) 20%, transparent),
+      inset 0 0 20px color-mix(in srgb, var(--color-analytics) 5%, transparent);
   }
 }
 
@@ -177,8 +188,8 @@
   }
 
   .timeline-glow {
-    box-shadow: 0 0 40px
-        color-mix(in srgb, var(--color-primary) 35%, transparent),
+    box-shadow:
+      0 0 40px color-mix(in srgb, var(--color-primary) 35%, transparent),
       0 0 80px color-mix(in srgb, var(--color-primary) 25%, transparent);
   }
 }
