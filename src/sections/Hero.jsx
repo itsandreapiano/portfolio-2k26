@@ -10,21 +10,36 @@ import Link from "next/link";
 import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
 
 const skills = [
+  // Development
   "JavaScript",
   "TypeScript",
   "React",
   "Next.js",
   "Node.js",
-  "CSS / SASS",
+  "HTML5",
+  "CSS3 / Sass",
   "Tailwind CSS",
   "SQL",
+
+  // Development Tools
   "Git",
+  "GitHub",
   "Vercel",
-  "Google Analytics",
-  "Google Workspace",
+
+  // Analytics & Business
+  "Google Analytics 4",
+  "Google Tag Manager",
+  "Google Search Console",
+  "Looker Studio",
   "Board EPM",
-  "OpenAI",
+  "Google Workspace",
+
+  // AI & Automation
+  "Gemini API",
+  "OpenAI API",
   "Retell AI",
+
+  // Design
   "Adobe Photoshop",
   "Adobe Illustrator",
 ];
@@ -172,7 +187,7 @@ export const Hero = () => {
         {/* Skills Section */}
         <div className="mt-20 animate-fade-in animation-delay-600">
           <p className="text-sm text-muted-foreground mb-6 text-center">
-            Technologies I work with
+            Technologies & Tools
           </p>
           <div className="relative overflow-hidden">
             <div
@@ -197,12 +212,12 @@ export const Hero = () => {
       </div>
 
       <div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 
-      animate-fade-in animation-delay-800"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2
+  z-20 animate-fade-in animation-delay-800"
       >
         <Link
           href="#about"
-          className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors group"
+          className="flex flex-col items-center gap-2 text-muted-foreground hover:text-analytics transition-colors group"
         >
           <span className="text-xs uppercase tracking-wider">Scroll</span>
           <ChevronDown className="w-6 h-6 animate-bounce" />

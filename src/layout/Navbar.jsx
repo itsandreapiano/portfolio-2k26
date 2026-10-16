@@ -31,14 +31,14 @@ export const Navbar = () => {
       }  z-50`}
     >
       <nav className="container mx-auto px-6 flex items-center justify-between">
-        <button
-          type="button"
+        <Link
+          href="/"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="text-xl font-bold tracking-tight hover:text-primary"
+          className="text-xl font-bold tracking-tight hover:text-primary min-w-27"
           aria-label="Scroll to top"
         >
           AP<span className="text-primary">.</span>
-        </button>
+        </Link>
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-1">
