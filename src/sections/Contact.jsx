@@ -9,6 +9,7 @@ import {
 import { Button } from "@/components/Button";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
+import Link from "next/link";
 
 const contactInfo = [
   {
@@ -216,7 +217,7 @@ export const Contact = () => {
               </h3>
               <div className="space-y-4">
                 {contactInfo.map((item, i) => (
-                  <a
+                  <Link
                     key={i}
                     href={item.href}
                     className="flex items-center gap-4 p-4 rounded-xl hover:bg-surface transition-colors group"
@@ -230,7 +231,7 @@ export const Contact = () => {
                       </div>
                       <div className="font-medium">{item.value}</div>
                     </div>
-                  </a>
+                  </Link>
                 ))}
               </div>
             </div>

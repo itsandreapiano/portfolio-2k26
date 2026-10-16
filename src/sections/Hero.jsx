@@ -4,9 +4,9 @@ import {
   ChevronDown,
   Github,
   Linkedin,
-  Twitter,
   Download,
 } from "lucide-react";
+import Link from "next/link";
 import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
 
 const skills = [
@@ -102,7 +102,10 @@ export const Hero = () => {
               <Button size="lg">
                 Contact Me <ArrowRight className="w-5 h-5" />
               </Button>
-              <AnimatedBorderButton>
+              <AnimatedBorderButton
+                href="/CV-Andrea-Piano.pdf"
+                download="Andrea-Piano-CV.pdf"
+              >
                 <Download className="w-5 h-5" />
                 Download CV
               </AnimatedBorderButton>
@@ -112,17 +115,19 @@ export const Hero = () => {
             <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
               <span className="text-sm text-muted-foreground">Follow me: </span>
               {[
-                { icon: Github, href: "#" },
-                { icon: Linkedin, href: "#" },
-                { icon: Twitter, href: "#" },
+                { icon: Github, href: "https://github.com/itsandreapiano" },
+                { icon: Linkedin, href: "https://linkedin.com/in/andreapiano" },
               ].map((social, idx) => (
-                <a
+                <Link
                   key={idx}
                   href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={social.icon.name}
                   className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300"
                 >
                   {<social.icon className="w-5 h-5" />}
-                </a>
+                </Link>
               ))}
             </div>
           </div>
@@ -195,13 +200,13 @@ export const Hero = () => {
         className="absolute bottom-8 left-1/2 -translate-x-1/2 
       animate-fade-in animation-delay-800"
       >
-        <a
+        <Link
           href="#about"
           className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors group"
         >
           <span className="text-xs uppercase tracking-wider">Scroll</span>
           <ChevronDown className="w-6 h-6 animate-bounce" />
-        </a>
+        </Link>
       </div>
     </section>
   );

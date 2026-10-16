@@ -1,9 +1,13 @@
-import { Github, Linkedin, Twitter, Heart } from "lucide-react";
+import { Github, Linkedin } from "lucide-react";
+import Link from "next/link";
 
 const socialLinks = [
-  { icon: Github, href: "#", label: "GitHub" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Twitter, href: "#", label: "Twitter" },
+  { icon: Github, href: "https://github.com/itsandreapiano", label: "GitHub" },
+  {
+    icon: Linkedin,
+    href: "https://linkedin.com/in/andreapiano",
+    label: "LinkedIn",
+  },
 ];
 
 const footerLinks = [
@@ -22,9 +26,14 @@ export const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           {/* Logo & Copyright */}
           <div className="text-center md:text-left">
-            <a href="#" className="text-xl font-bold tracking-tight">
+            <button
+              type="button"
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              className="text-xl font-bold tracking-tight cursor-pointer"
+              aria-label="Scroll to top"
+            >
               AP<span className="text-primary">.</span>
-            </a>
+            </button>
             <p className="text-sm text-muted-foreground mt-2">
               © {currentYear} Andrea Piano. All rights reserved.
             </p>
@@ -33,27 +42,29 @@ export const Footer = () => {
           {/* Links */}
           <nav className="flex flex-wrap justify-center gap-6">
             {footerLinks.map((link) => (
-              <a
+              <Link
                 key={link.href}
                 href={link.href}
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </nav>
 
           {/* Social Links */}
           <div className="flex items-center gap-4">
             {socialLinks.map((social) => (
-              <a
+              <Link
+                target="_blank"
+                rel="noopener noreferrer"
                 key={social.label}
                 href={social.href}
                 aria-label={social.label}
                 className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all"
               >
                 <social.icon className="w-5 h-5" />
-              </a>
+              </Link>
             ))}
           </div>
         </div>
