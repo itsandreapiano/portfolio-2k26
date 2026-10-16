@@ -5,24 +5,25 @@ const highlights = [
     icon: Code2,
     title: "Clean Code",
     description:
-      "Writing maintainable, scalable code that stands the test of time.",
+      "Writing clean, well-structured, and efficient code to create reliable, high-quality applications.",
   },
   {
     icon: Rocket,
     title: "Performance",
     description:
-      "Optimizing for speed and delivering lightning-fast user experiences.",
+      "Building fast, responsive applications that deliver smooth, intuitive user experiences.",
   },
   {
     icon: Users,
-    title: "Collaboration",
-    description: "Working closely with teams to bring ideas to life.",
+    title: "Global Collaboration",
+    description:
+      "Working with international teams, combining diverse perspectives and expertise to achieve shared goals.",
   },
   {
     icon: Lightbulb,
-    title: "Innovation",
+    title: "AI & Innovation",
     description:
-      "Staying ahead with the latest technologies and best practices.",
+      "Integrating AI technologies into digital solutions to automate processes, enhance functionality, and explore new possibilities.",
   },
 ];
 
@@ -40,46 +41,45 @@ export const About = () => {
             </div>
 
             <h2 className="text-4xl md:text-5xl font-bold leading-tight animate-fade-in animation-delay-100 text-primary">
-              Building the future,
+              Where technology{" "}
               <span className="font-serif italic font-normal text-white">
-                {" "}
-                one component at a time.
-              </span>
+                meets
+              </span>{" "}
+              <span className="gradient-text">creativity.</span>
             </h2>
 
             <div className="space-y-4 text-muted-foreground animate-fade-in animation-delay-200">
               <p>
-                I'm a software engineer and digital solutions specialist with
-                over 4 years of experience working at the intersection of
-                technology, business, and design. I enjoy turning real business
-                needs into practical digital solutions, from modern web
-                applications to internal tools, integrations, and automated
-                workflows.
+                I'm a{" "}
+                <strong>
+                  software engineer and digital solutions professional,
+                </strong>{" "}
+                with over 4 years of experience combining software development,
+                design, and business technology to create effective digital
+                solutions.
               </p>
 
               <p>
-                My core stack includes JavaScript, React, Next.js, and CSS,
-                complemented by experience with analytics, cloud platforms,
-                APIs, and business systems. I enjoy working across the full
-                lifecycle of a project: understanding the problem, designing the
-                solution, building it, deploying it, and continuously improving
-                it.
+                My primary expertise lies in <strong>React & Next.js</strong>,
+                complemented by experience in UI/UX, analytics, and business
+                systems. I enjoy bringing ideas to life, combining creativity
+                and technical expertise to design, develop, and deploy digital
+                solutions from the ground up.
               </p>
 
               <p>
-                Beyond development, I have a strong interest in UI/UX, digital
-                design, analytics, and AI. I enjoy roles where I can combine
-                technical skills with creativity and business thinking, take
-                ownership of projects, and use technology to solve real-world
-                problems.
+                Beyond software development, I'm passionate about{" "}
+                <strong>digital design, AI, and automation</strong>. I thrive in
+                environments where I can combine technical expertise with
+                creativity and strategic thinking, take ownership of projects,
+                and contribute to meaningful digital innovation.
               </p>
             </div>
 
             <div className="glass rounded-2xl p-6 glow-border-primary animate-fade-in animation-delay-300">
               <p className="text-lg font-medium italic text-foreground">
-                "My mission is to create digital experiences that are not just
-                functional, but truly delightful — products that users love to
-                use and developers love to maintain."
+                "High performance? It's a must. The more creative?{" "}
+                <span className="font-semibold"> The better.</span>"
               </p>
             </div>
           </div>

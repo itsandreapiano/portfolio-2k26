@@ -2,12 +2,12 @@ import { Github, Linkedin } from "lucide-react";
 import Link from "next/link";
 
 const socialLinks = [
-  { icon: Github, href: "https://github.com/itsandreapiano", label: "GitHub" },
   {
     icon: Linkedin,
     href: "https://linkedin.com/in/andreapiano",
     label: "LinkedIn",
   },
+  { icon: Github, href: "https://github.com/itsandreapiano", label: "GitHub" },
 ];
 
 const footerLinks = [
