@@ -29,7 +29,7 @@ const highlights = [
 
 export const About = () => {
   return (
-    <section id="about" className="py-24 relative overflow-hidden">
+    <section id="about" className="py-20 relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Column */}
@@ -78,8 +78,12 @@ export const About = () => {
 
             <div className="glass rounded-2xl p-6 glow-border-primary animate-fade-in animation-delay-300">
               <p className="text-lg font-medium italic text-foreground">
-                "High performance? It's a must. The more creative?{" "}
-                <span className="font-semibold"> The better.</span>"
+                "High performance? It's a must. <br /> The more creative?{" "}
+                <span className="font-semibold gradient-text">
+                  {" "}
+                  The better.
+                </span>
+                "
               </p>
             </div>
           </div>

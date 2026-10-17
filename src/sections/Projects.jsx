@@ -34,18 +34,18 @@ const projects = [
   },
 
   {
-    title: "Sardegna Digital Library",
+    title: "Sardinia Digital Library",
     description:
-      "Sardegna Digital Library is a multimedia platform dedicated to preserving and showcasing Sardinia's cultural heritage through images, videos, audio, and historical documents. It features an extensive digital archive with advanced search and filtering tools to explore the island's history, traditions, and identity.",
+      "Sardinia Digital Library is a multimedia platform dedicated to preserving and showcasing Sardinia's cultural heritage through images, videos, audio, and historical documents. It features an extensive digital archive with advanced search and filtering tools to explore the island's history, traditions, and identity.",
     image: "/projects/sdl.png",
     tags: ["React", "Next.js", "Bootstrap"],
-    link: "https://www.sardegnadigitallibrary.it",
+    link: "https://www.sardiniadigitallibrary.it",
   },
 ];
 
 export const Projects = () => {
   return (
-    <section id="projects" className="py-24 relative overflow-hidden">
+    <section id="projects" className="py-20 relative overflow-hidden">
       {/* Bg glows */}
       <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
       <div className="absolute bottom-1/4 left-0 w-64 h-64 bg-highlight/5 rounded-full blur-3xl" />
