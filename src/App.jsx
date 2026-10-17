@@ -1,5 +1,6 @@
 "use client";
 
+import { BackToTop } from "@/components/BackToTop";
 import { Navbar } from "@/layout/Navbar";
 import { Hero } from "@/sections/Hero";
 import { About } from "@/sections/About";
@@ -11,7 +12,7 @@ import { Footer } from "@/layout/Footer";
 
 function App() {
   return (
-    <div className="min-h-screen overflow-x-hidden">
+    <div id="top" className="min-h-screen overflow-x-hidden">
       <Navbar />
       <main>
         <Hero />
@@ -22,6 +23,7 @@ function App() {
         <Contact />
       </main>
       <Footer />
+      <BackToTop />
     </div>
   );
 }

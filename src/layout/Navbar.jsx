@@ -50,7 +50,10 @@ export const Navbar = () => {
       <nav className="container mx-auto px-6 flex shrink-0 items-center justify-between">
         <Link
           href="/"
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          onClick={() => {
+            setIsMenuOpen(false);
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
           className="text-xl font-bold tracking-tight hover:text-primary min-w-27"
           aria-label="Scroll to top"
         >

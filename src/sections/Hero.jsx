@@ -105,7 +105,7 @@ export const Hero = () => {
                 </span>
               </h1>
               <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
-                Hi, I'm Andrea Piano, a digital solutions professional
+                Hi! I'm Andrea Piano, a digital solutions professional
                 passionate about combining technology, design, and business
                 strategy to create intuitive digital experiences, develop
                 innovative solutions, and improve business processes.
@@ -208,6 +208,7 @@ export const Hero = () => {
              bg-gradient-to-l from-background to-transparent z-10"
             />
             <div className="flex animate-marquee">
+              {" "}
               {[...skills, ...skills].map((skill, idx) => (
                 <div key={idx} className="flex-shrink-0 px-8 py-4">
                   <span className="text-xl font-semibold text-muted-foreground/50 hover:text-muted-foreground transition-colors">

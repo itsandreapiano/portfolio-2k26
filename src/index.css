@@ -140,6 +140,12 @@
     animation: marquee 30s linear infinite;
   }
 
+  @media (max-width: 767px) {
+    .animate-marquee {
+      animation-duration: 8s;
+    }
+  }
+
   .animation-delay-100 {
     animation-delay: 100ms;
   }
@@ -202,6 +208,25 @@
   background-image:
     url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.95' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E"),
     linear-gradient(135deg, #ffffff, #10b981);
+
+  background-blend-mode: multiply;
+  background-size:
+    120px 120px,
+    100% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  animation: tv-noise 0.12s steps(3) infinite;
+}
+
+.gradient-better {
+  display: inline-block;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+
+  background-image:
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.95' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E"),
+    linear-gradient(135deg, #ffffff, #bfbfbf);
 
   background-blend-mode: multiply;
   background-size:

@@ -11,7 +11,7 @@ const highlights = [
     icon: Rocket,
     title: "Performance",
     description:
-      "Building fast, responsive applications that deliver smooth, intuitive user experiences.",
+      "Building fast, responsive Next.js applications optimized for performance, SEO, and search visibility following Google's best practices.",
   },
   {
     icon: Users,
@@ -51,7 +51,7 @@ export const About = () => {
             <div className="space-y-4 text-muted-foreground animate-fade-in animation-delay-200">
               <p>
                 I'm a <strong>passionate problem solver</strong> with a keen eye
-                for design, with over 4 years of experience combining web &
+                for design and over 4 years of experience combining web and
                 software development, digital marketing, and business technology
                 to create effective digital solutions.
               </p>
@@ -59,8 +59,8 @@ export const About = () => {
               <p>
                 My primary expertise lies in <strong>React & Next.js</strong>,
                 complemented by experience in UI/UX, analytics, and business
-                systems. I enjoy bringing ideas to life, combining creativity
-                and technical expertise to design, develop, and deploy digital
+                systems. I enjoy bringing ideas to life by combining creativity
+                with technical expertise to design, develop, and deploy digital
                 solutions from the ground up.
               </p>
 
@@ -76,7 +76,7 @@ export const About = () => {
             <div className="glass rounded-2xl p-6 glow-border-primary animate-fade-in animation-delay-300">
               <p className="text-lg font-medium italic text-foreground">
                 "High performance? It's a must. <br /> The more creative?{" "}
-                <span className="font-semibold gradient-text">
+                <span className="font-semibold gradient-better">
                   {" "}
                   The better.
                 </span>

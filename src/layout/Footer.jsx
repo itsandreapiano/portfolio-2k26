@@ -27,19 +27,12 @@ export const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           {/* Logo & Copyright */}
           <div className="text-center md:text-left">
-            <button
-              type="button"
-              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-              className="text-xl font-bold tracking-tight cursor-pointer"
-              aria-label="Scroll to top"
-            >
-              <Image
-                src="/AP_logo_footer.png"
-                alt="Logo"
-                width={255}
-                height={255}
-              />
-            </button>
+            <Image
+              src="/AP_logo_footer.png"
+              alt="Logo"
+              width={255}
+              height={255}
+            />
             <p className="text-sm text-muted-foreground mt-2">
               © {currentYear} Andrea Piano. All rights reserved.
             </p>
