@@ -1,4 +1,5 @@
 import { Github, Linkedin } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 const socialLinks = [
@@ -32,7 +33,12 @@ export const Footer = () => {
               className="text-xl font-bold tracking-tight cursor-pointer"
               aria-label="Scroll to top"
             >
-              AP<span className="text-primary">.</span>
+              <Image
+                src="/AP_logo_footer.png"
+                alt="Logo"
+                width={255}
+                height={255}
+              />
             </button>
             <p className="text-sm text-muted-foreground mt-2">
               © {currentYear} Andrea Piano. All rights reserved.

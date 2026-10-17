@@ -2,12 +2,14 @@ import { Button } from "@/components/Button";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 const navLinks = [
   { href: "#about", label: "About" },
   { href: "#projects", label: "Projects" },
   { href: "#experience", label: "Experience" },
   { href: "#testimonials", label: "Testimonials" },
+  { href: "#contact", label: "Contact" },
 ];
 
 export const Navbar = () => {
@@ -37,7 +39,7 @@ export const Navbar = () => {
           className="text-xl font-bold tracking-tight hover:text-primary min-w-27"
           aria-label="Scroll to top"
         >
-          AP<span className="text-primary">.</span>
+          <Image src="/AP_logo.png" alt="Logo" width={55} height={55} />
         </Link>
 
         {/* Desktop Nav */}
@@ -94,10 +96,6 @@ export const Navbar = () => {
                 {link.label}
               </Link>
             ))}
-
-            <Button onClick={() => setIsMobileMenuOpen(false)}>
-              Contact Me
-            </Button>
           </div>
         </div>
       )}
