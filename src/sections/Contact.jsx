@@ -47,41 +47,59 @@ export const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    if (isLoading) return;
+
     setIsLoading(true);
     setSubmitStatus({ type: null, message: "" });
+
     try {
       const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
       const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+      const confirmationTemplateId =
+        process.env.NEXT_PUBLIC_EMAILJS_CONFIRMATION_TEMPLATE_ID;
       const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
 
       if (!serviceId || !templateId || !publicKey) {
-        throw new Error(
-          "EmailJS configuration is missing. Please check your environment variables.",
-        );
+        throw new Error("EmailJS configuration is missing.");
       }
 
-      await emailjs.send(
-        serviceId,
-        templateId,
-        {
-          name: formData.name,
-          email: formData.email,
-          message: formData.message,
-        },
+      const templateParams = {
+        name: formData.name.trim(),
+        email: formData.email.trim(),
+        message: formData.message.trim(),
+      };
+
+      // 1. Send the contact message to your inbox
+      await emailjs.send(serviceId, templateId, templateParams, {
         publicKey,
-      );
+      });
+
+      // 2. Send an automatic confirmation to the visitor
+      if (confirmationTemplateId) {
+        try {
+          await emailjs.send(
+            serviceId,
+            confirmationTemplateId,
+            templateParams,
+            { publicKey },
+          );
+        } catch (confirmationError) {
+          console.error("Confirmation email failed:", confirmationError);
+        }
+      }
 
       setSubmitStatus({
         type: "success",
-        message: "Message sent successfully! I'll get back to you soon.",
+        message: "Message sent! I'll be in touch soon.",
       });
+
       setFormData({ name: "", email: "", message: "" });
     } catch (error) {
       console.error("EmailJS error:", error);
+
       setSubmitStatus({
         type: "error",
-        message:
-          error.text || "Failed to send message. Please try again later.",
+        message: "Failed to send message. Please try again later.",
       });
     } finally {
       setIsLoading(false);
