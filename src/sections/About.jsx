@@ -58,10 +58,10 @@ export const About = () => {
 
               <p>
                 My primary expertise lies in <strong>React & Next.js</strong>,
-                complemented by experience in UI/UX, analytics, and business
-                systems. I enjoy bringing ideas to life by combining creativity
-                with technical expertise to design, develop, and deploy digital
-                solutions from the ground up.
+                complemented by experience in graphic design, analytics, and
+                business systems. I enjoy bringing ideas to life by combining
+                creativity with technical expertise to design, develop, and
+                deploy digital solutions from the ground up.
               </p>
 
               <p>

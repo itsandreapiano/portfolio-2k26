@@ -9,7 +9,7 @@ export const metadata = {
   },
 
   description:
-    "Explore Andrea Piano's portfolio. Software developer specializing in React, Next.js, TypeScript, UI/UX, and digital solutions, with experience in analytics and business technology.",
+    "Explore Andrea Piano's portfolio. Software developer specializing in React, Next.js, TypeScript, graphic design, and digital marketing, with experience in analytics and business technology.",
 
   keywords: [
     "Andrea Piano",
@@ -34,7 +34,7 @@ export const metadata = {
   openGraph: {
     title: "Andrea Piano | Software Developer & Digital Solutions",
     description:
-      "Software engineering, UI/UX, and digital solutions. Explore my projects, skills, and professional experience.",
+      "Digital Solutions Professional specializing in software development, digital marketing, and business technology. Explore my projects, skills, and experience.",
     url: "https://www.andreapiano.dev",
     siteName: "Andrea Piano",
     type: "website",
