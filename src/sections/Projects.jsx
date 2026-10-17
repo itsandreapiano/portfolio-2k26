@@ -3,20 +3,20 @@ import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
 import Link from "next/link";
 const projects = [
   {
-    title: "Greenpeace Supporters Portal",
-    description:
-      "A web portal for Greenpeace supporters to manage their subscriptions and donations for promoting campaigns.",
-    image: "/projects/greenpeace.png",
-    tags: ["React", "Next.js", "Bootstrap"],
-    link: "https://sostenitori.greenpeace.it",
-  },
-  {
     title: "RWS Polska",
     description:
       "RWS Polska is a business website featuring an interactive product catalog, advanced filtering, and product customization. Customers can explore equipment, request personalized quotes, and contact sales teams.",
     image: "/projects/rwspolska.png",
     tags: ["React", "TypeScript", "Next.js", "Tailwind"],
     link: "https://rwspolska.pl",
+  },
+  {
+    title: "Greenpeace Supporters Portal",
+    description:
+      "A web portal for Greenpeace supporters to manage their subscriptions and donations for promoting campaigns.",
+    image: "/projects/greenpeace.png",
+    tags: ["React", "Next.js", "Bootstrap"],
+    link: "https://sostenitori.greenpeace.it",
   },
   {
     title: "iStellas",
@@ -32,6 +32,7 @@ const projects = [
     ],
     link: "https://istellas.vercel.app",
   },
+
   {
     title: "Sardegna Digital Library",
     description:
