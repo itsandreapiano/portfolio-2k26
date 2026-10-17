@@ -69,17 +69,16 @@ export const Experience = () => {
             className="text-primary text-sm
            font-medium tracking-wider uppercase animate-fade-in"
           >
-            Career Journey
+            Career Timeline
           </span>
           <h2
             className="text-4xl md:text-5xl font-bold
            mt-4 mb-6 animate-fade-in animation-delay-100
             text-primary"
           >
-            Experience that{" "}
+            Experiences that{" "}
             <span className="font-serif italic font-normal text-white">
-              {" "}
-              speaks volumes.
+              shaped me.{" "}
             </span>
           </h2>
 
@@ -87,8 +86,10 @@ export const Experience = () => {
             className="text-muted-foreground
            animate-fade-in animation-delay-200"
           >
-            A timeline of my professional growth, from curious beginner to
-            senior engineer leading teams and building products at scale.
+            A timeline of my professional growth, from web development intern to
+            an experienced digital solutions professional, building innovative
+            concepts, exploring new technologies, and independently managing
+            international projects.
           </p>
         </div>
 

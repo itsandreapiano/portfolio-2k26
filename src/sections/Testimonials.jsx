@@ -60,19 +60,19 @@ export const Testimonials = () => {
           text-sm font-medium tracking-wider 
           uppercase animate-fade-in"
           >
-            What People Say
+            Testimonials
           </span>
           <h2
             className="text-4xl md:text-5xl 
           font-bold mt-4 mb-6 animate-fade-in 
           animation-delay-100 text-analytics"
           >
-            Kind words from{" "}
+            Their words,{" "}
             <span
               className="font-serif italic 
             font-normal text-white"
             >
-              amazing people.
+              my journey.{" "}
             </span>
           </h2>
         </div>
@@ -86,8 +86,8 @@ export const Testimonials = () => {
                 <Quote className="w-6 h-6 text-primary-foreground" />
               </div>
 
-              <blockquote className="text-xl md:text-2xl font-medium leading-relaxed mb-8 pt-4 whitespace-pre-line">
-                "{testimonials[activeIdx].quote}"
+              <blockquote className="text-sm md:text-base font-medium italic leading-snug mb-8 pt-4 whitespace-pre-line">
+                {testimonials[activeIdx].quote}
               </blockquote>
 
               <div className="flex items-center gap-4">
@@ -110,8 +110,15 @@ export const Testimonials = () => {
             {/* Testimonials Navigation */}
             <div className="flex items-center justify-center gap-4 mt-8">
               <button
-                className="p-3 rounded-full glass hover:bg-analytics/10 hover:text-analytics transition-all"
                 onClick={previous}
+                disabled={testimonials.length <= 1}
+                aria-label="Previous testimonial"
+                className="p-3 rounded-full glass
+      enabled:hover:bg-analytics/10
+      enabled:hover:text-analytics
+      disabled:opacity-30
+      disabled:cursor-default
+      transition-all duration-300"
               >
                 <ChevronLeft />
               </button>
@@ -121,18 +128,31 @@ export const Testimonials = () => {
                   <button
                     key={idx}
                     onClick={() => setActiveIdx(idx)}
-                    className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                      idx === activeIdx
-                        ? "w-8 bg-analytics"
-                        : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
-                    }`}
+                    disabled={testimonials.length <= 1}
+                    aria-label={`Show testimonial ${idx + 1}`}
+                    aria-current={idx === activeIdx ? "true" : undefined}
+                    className={`w-2 h-2 rounded-full transition-all duration-300
+        disabled:opacity-30
+        disabled:cursor-default
+        ${
+          idx === activeIdx
+            ? "w-8 bg-analytics"
+            : "bg-muted-foreground/30 enabled:hover:bg-muted-foreground/50"
+        }`}
                   />
                 ))}
               </div>
 
               <button
                 onClick={next}
-                className="p-3 rounded-full glass hover:bg-analytics/10 hover:text-analytics transition-all"
+                disabled={testimonials.length <= 1}
+                aria-label="Next testimonial"
+                className="p-3 rounded-full glass
+      enabled:hover:bg-analytics/10
+      enabled:hover:text-analytics
+      disabled:opacity-30
+      disabled:cursor-default
+      transition-all duration-300"
               >
                 <ChevronRight />
               </button>
