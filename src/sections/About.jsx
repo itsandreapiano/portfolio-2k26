@@ -50,13 +50,10 @@ export const About = () => {
 
             <div className="space-y-4 text-muted-foreground animate-fade-in animation-delay-200">
               <p>
-                I'm a{" "}
-                <strong>
-                  software engineer and digital solutions professional,
-                </strong>{" "}
-                with over 4 years of experience combining software development,
-                design, and business technology to create effective digital
-                solutions.
+                I'm a <strong>passionate problem solver</strong> with a keen eye
+                for design, with over 4 years of experience combining web &
+                software development, digital marketing, and business technology
+                to create effective digital solutions.
               </p>
 
               <p>

@@ -4,17 +4,17 @@ export const metadata = {
   metadataBase: new URL("https://www.andreapiano.dev"),
 
   title: {
-    default: "Andrea Piano | Software Engineer & Digital Solutions",
+    default: "Andrea Piano | Software Development & Digital Solutions",
     template: "%s | Andrea Piano",
   },
 
   description:
-    "Explore Andrea Piano's portfolio. Software engineer specializing in React, Next.js, TypeScript, UI/UX, and digital solutions, with experience in analytics and business technology.",
+    "Explore Andrea Piano's portfolio. Software developer specializing in React, Next.js, TypeScript, UI/UX, and digital solutions, with experience in analytics and business technology.",
 
   keywords: [
     "Andrea Piano",
-    "Software Engineer",
-    "Frontend Engineer",
+    "Software Developer",
+    "Frontend Developer",
     "React",
     "Next.js",
     "TypeScript",
@@ -32,7 +32,7 @@ export const metadata = {
   },
 
   openGraph: {
-    title: "Andrea Piano | Software Engineer & Digital Solutions",
+    title: "Andrea Piano | Software Developer & Digital Solutions",
     description:
       "Software engineering, UI/UX, and digital solutions. Explore my projects, skills, and professional experience.",
     url: "https://www.andreapiano.dev",

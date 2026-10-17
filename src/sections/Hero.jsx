@@ -105,10 +105,10 @@ export const Hero = () => {
                 </span>
               </h1>
               <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
-                Hi, I'm Andrea Piano, a software engineer and digital solutions
-                professional passionate about combining technology, design, and
-                business strategy to create intuitive digital experiences,
-                develop innovative solutions, and improve business processes.
+                Hi, I'm Andrea Piano, a digital solutions professional
+                passionate about combining technology, design, and business
+                strategy to create intuitive digital experiences, develop
+                innovative solutions, and improve business processes.
               </p>
             </div>
 
