@@ -21,18 +21,33 @@ export const Navbar = () => {
       setIsScrolled(window.scrollY > 50);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    const desktopBreakpoint = window.matchMedia("(min-width: 48rem)");
+    const handleBreakpointChange = (event) => {
+      if (event.matches) {
+        setIsMobileMenuOpen(false);
+      }
+    };
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    desktopBreakpoint.addEventListener("change", handleBreakpointChange);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      desktopBreakpoint.removeEventListener("change", handleBreakpointChange);
+    };
   }, []);
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 transition-all duration-500 ${
-        isScrolled ? "glass-strong py-3" : "bg-transparent py-5"
+        isMobileMenuOpen
+          ? "glass-strong h-dvh flex flex-col overflow-hidden py-3"
+          : isScrolled
+            ? "glass-strong py-3"
+            : "bg-transparent py-5"
       }  z-50`}
     >
-      <nav className="container mx-auto px-6 flex items-center justify-between">
+      <nav className="container mx-auto px-6 flex shrink-0 items-center justify-between">
         <Link
           href="/"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
@@ -84,7 +99,7 @@ export const Navbar = () => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden glass-strong animate-fade-in">
+        <div className="md:hidden flex-1 overflow-y-auto animate-fade-in">
           <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
             {navLinks.map((link, index) => (
               <Link
