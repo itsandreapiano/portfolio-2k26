@@ -55,15 +55,16 @@ export const Projects = () => {
             Featured Work
           </span>
           <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-primary">
-            Projects that
+            Ideas. Code.{" "}
             <span className="font-serif italic font-normal text-white">
               {" "}
-              make an impact.
+              Creation.{" "}
             </span>
           </h2>
           <p className="text-muted-foreground animate-fade-in animation-delay-200">
-            A selection of my recent work, from complex web applications to
-            innovative tools that solve real-world problems.
+            Explore a selection of web applications I've worked on, both
+            independently and as part of a team, combining modern technologies,
+            intuitive design, and creative thinking.
           </p>
         </div>
 
@@ -112,20 +113,31 @@ export const Projects = () => {
 
               {/* Content */}
               <div className="p-6 space-y-4">
-                <div className="flex items-start justify-between">
-                  <h3 className="text-xl font-semibold group-hover:text-primary transition-colors">
+                <div className="flex items-start justify-between gap-4">
+                  <Link
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xl font-semibold hover:text-primary transition-colors duration-300"
+                  >
                     {project.title}
-                  </h3>
-                  <ArrowUpRight
-                    className="w-5 h-5 
-                  text-muted-foreground group-hover:text-primary
-                   group-hover:translate-x-1 
-                   group-hover:-translate-y-1 transition-all"
-                  />
+                  </Link>
+
+                  <Link
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Visit ${project.title}`}
+                    className="shrink-0 text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 hover:-translate-y-1"
+                  >
+                    <ArrowUpRight className="w-5 h-5" />
+                  </Link>
                 </div>
+
                 <p className="text-muted-foreground text-sm">
                   {project.description}
                 </p>
+
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag, tagIdx) => (
                     <span
@@ -142,12 +154,12 @@ export const Projects = () => {
         </div>
 
         {/* View All CTA */}
-        <div className="text-center mt-12 animate-fade-in animation-delay-500">
+        {/* <div className="text-center mt-12 animate-fade-in animation-delay-500">
           <AnimatedBorderButton>
             View All Projects
             <ArrowUpRight className="w-5 h-5" />
           </AnimatedBorderButton>
-        </div>
+        </div> */}
       </div>
     </section>
   );

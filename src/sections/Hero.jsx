@@ -98,7 +98,7 @@ export const Hero = () => {
             <div className="space-y-4">
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100">
                 No problems, <br />
-                only <span className="text-primary glow-text">innovative</span>
+                only <span className="text-primary glow-text ">innovative</span>
                 <br />
                 <span className="font-serif italic font-normal text-white">
                   solutions.
@@ -217,10 +217,28 @@ export const Hero = () => {
       >
         <Link
           href="#about"
-          className="flex flex-col items-center gap-2 text-muted-foreground hover:text-analytics transition-colors group"
+          onClick={(e) => {
+            e.preventDefault();
+
+            document.getElementById("about")?.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }}
+          className="flex flex-col items-center gap-2 text-muted-foreground group"
         >
-          <span className="text-xs uppercase tracking-wider">Scroll</span>
-          <ChevronDown className="w-6 h-6 animate-bounce" />
+          <span
+            className="text-xs uppercase tracking-wider
+      group-hover:tracking-[0.3em] group-hover:text-white/75
+      transition-all duration-500 ease-in-out"
+          >
+            Scroll
+          </span>
+
+          <ChevronDown
+            className="w-6 h-6 animate-bounce
+      group-hover:text-white/75 transition-colors duration-500"
+          />
         </Link>
       </div>
     </section>
