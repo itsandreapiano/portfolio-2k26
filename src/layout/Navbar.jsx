@@ -57,7 +57,18 @@ export const Navbar = () => {
 
         {/* CTA Button */}
         <div className="hidden md:block">
-          <Button size="sm">Contact Me</Button>
+          <Button
+            size="sm"
+            onClick={() => {
+              setIsMobileMenuOpen(false);
+              document.getElementById("contact")?.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
+            }}
+          >
+            Contact Me
+          </Button>
         </div>
 
         {/* Mobile Menu Button */}
