@@ -38,10 +38,10 @@ const experiences = [
   },
   {
     period: "2022 — 2023",
-    role: "Web Developer",
+    role: "Front-end Software Developer",
     company: "Softfobia S.r.l. (ex Minsait)",
     description:
-      "Progressed from intern to Web Developer, contributing to 5 web applications for Italian organizations including Greenpeace Italia and the Autonomous Region of Sardinia. Focused on frontend development, responsive interfaces, and collaborative software delivery.",
+      "Progressed from intern to a full-time developer, contributing to 5 web applications for Italian clients and organizations, including as Greenpeace Italia and Sardinia Region (RAS). Worked on responsive interfaces, API integrations, and collaborative software delivery.",
     technologies: [
       "React",
       "Next.js",

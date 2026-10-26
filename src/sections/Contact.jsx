@@ -470,8 +470,8 @@ export const Contact = () => {
               </div>
 
               <p className="text-muted-foreground text-sm">
-                I'm open to new opportunities, exciting projects, and
-                collaborations. Whether you're looking for a full-time
+                I'm open to new opportunities across Europe, exciting projects,
+                and collaborations. Whether you're looking for a full-time
                 professional or a freelance consultant, let's talk!
               </p>
             </div>
