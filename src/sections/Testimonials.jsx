@@ -22,8 +22,7 @@ Thank you once again for all the hard work and extraordinary results achieved du
 Ben`,
     author: "Benito Massidda",
     role: "Senior Software Developer - Minsait",
-    avatar:
-      "https://media.licdn.com/dms/image/v2/D4E03AQGeCXreS4z0lg/profile-displayphoto-crop_800_800/B4EZ_NkiH7KUAM-/0/1785860335401?e=1793232000&v=beta&t=eiZyz_ELHl5Az_KJ-yAum1a7KENAihYB5PRJQ4mOj7o",
+    avatar: "/ben.png",
   },
 ];
 
