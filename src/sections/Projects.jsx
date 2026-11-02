@@ -83,38 +83,47 @@ export const Projects = () => {
           {projects.map((project, idx) => (
             <div
               key={project.title}
-              className="group glass rounded-2xl overflow-hidden animate-fade-in md:row-span-1"
+              className="group glass block rounded-2xl overflow-hidden animate-fade-in md:row-span-1"
               style={{ animationDelay: `${(idx + 1) * 100}ms` }}
             >
               {/* Project Image */}
               <div className="relative overflow-hidden aspect-video">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
+                <Link
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Visit ${project.title}`}
+                  className="absolute inset-0 block"
+                >
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                </Link>
 
-                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent opacity-60" />
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-card via-card/50 to-transparent opacity-60" />
 
                 {/* Overlay Links */}
-                <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute inset-0 pointer-events-none flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <Link
+                    href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    href={project.link}
                     aria-label={`Visit ${project.title}`}
-                    className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
+                    className="pointer-events-auto p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
                   >
                     <ArrowUpRight className="w-5 h-5" />
                   </Link>
 
                   {project.github && (
                     <Link
+                      href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      href={project.github}
                       aria-label={`View ${project.title} on GitHub`}
-                      className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
+                      className="pointer-events-auto p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
                     >
                       <Github className="w-5 h-5" />
                     </Link>
@@ -124,7 +133,7 @@ export const Projects = () => {
 
               {/* Project Content */}
               <div className="p-6 space-y-4">
-                {/* Title */}
+                {/* Title and Arrow */}
                 <div className="flex items-start justify-between gap-4">
                   <Link
                     href={project.link}
