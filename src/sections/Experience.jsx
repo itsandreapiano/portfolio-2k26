@@ -87,9 +87,9 @@ export const Experience = () => {
            animate-fade-in animation-delay-200"
           >
             A timeline of my professional growth, from web development intern to
-            an experienced digital solutions professional, building innovative
-            concepts, exploring new technologies, and independently managing
-            international projects.
+            experienced Software Developer, building innovative solutions,
+            exploring emerging technologies, and independently managing projects
+            for international clients.
           </p>
         </div>
 

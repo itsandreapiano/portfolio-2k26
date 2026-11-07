@@ -90,7 +90,7 @@ export const Hero = () => {
             <div className="animate-fade-in">
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-analytics">
                 <span className="w-2 h-2 bg-analytics rounded-full animate-pulse" />
-                Software & Business Solutions
+                Software Development
               </span>
             </div>
 
@@ -105,11 +105,11 @@ export const Hero = () => {
                 </span>
               </h1>
               <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
-                Hi! I'm Andrea Piano, a digital solutions professional
-                passionate about combining software development, technology,
-                design, and business strategy to create intuitive digital
-                experiences, develop innovative solutions, and improve business
-                processes.
+                Hi! I'm Andrea Piano, a passionate Software Developer with
+                experience in web development, enterprise business applications,
+                and digital solutions. I enjoy combining technology, design, and
+                business understanding to build intuitive digital experiences,
+                develop innovative solutions, and streamline business processes.
               </p>
             </div>
 

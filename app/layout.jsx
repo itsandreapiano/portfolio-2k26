@@ -34,7 +34,7 @@ export const metadata = {
   openGraph: {
     title: "Andrea Piano | Software Developer & Digital Solutions",
     description:
-      "Digital Solutions Professional specializing in software development, digital marketing, and business technology. Explore my projects, skills, and experience.",
+      "Software Developer specializing in React, Next.js, enterprise business applications, and digital solutions. Explore my projects, technical skills, and professional experience.",
     url: "https://www.andreapiano.dev",
     siteName: "Andrea Piano",
     type: "website",

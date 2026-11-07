@@ -51,25 +51,25 @@ export const About = () => {
             <div className="space-y-4 text-muted-foreground animate-fade-in animation-delay-200">
               <p>
                 I'm a <strong>passionate problem solver</strong> with a keen eye
-                for design and over 4 years of experience combining web and
-                software development, digital marketing, and business technology
-                to create effective digital solutions.
+                for design and over 4 years of experience combining web
+                development, business applications, and digital technologies to
+                create effective solutions.
               </p>
 
               <p>
                 My primary expertise lies in <strong>React & Next.js</strong>,
-                complemented by experience in graphic design, analytics, and
-                business systems. I enjoy bringing ideas to life by combining
-                creativity with technical expertise to design, develop, and
-                deploy digital solutions from the ground up.
+                complemented by experience in enterprise business applications,
+                digital design, and analytics. I enjoy bringing ideas to life by
+                combining creativity with technical expertise to design,
+                develop, and deploy software solutions from the ground up.
               </p>
 
               <p>
                 Beyond software development, I'm passionate about{" "}
-                <strong>digital design, AI, and automation</strong>. I thrive in
-                environments where I can combine technical expertise with
-                creativity and strategic thinking, take ownership of projects,
-                and contribute to meaningful digital innovation.
+                <strong>AI, automation, and emerging technologies.</strong>. I
+                thrive in environments where I can combine technical expertise
+                with creativity and strategic thinking, take ownership of
+                projects, and contribute to meaningful innovation.
               </p>
             </div>
 
