@@ -1,6 +1,6 @@
 "use client";
 
-import { BackToTop } from "@/components/BackToTop";
+import { AIChatbot } from "@/components/AIChatbot";
 import { Navbar } from "@/layout/Navbar";
 import { Hero } from "@/sections/Hero";
 import { About } from "@/sections/About";
@@ -23,7 +23,7 @@ function App() {
         <Contact />
       </main>
       <Footer />
-      <BackToTop />
+      <AIChatbot />
     </div>
   );
 }

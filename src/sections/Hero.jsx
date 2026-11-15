@@ -90,7 +90,7 @@ export const Hero = () => {
             <div className="animate-fade-in">
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-analytics">
                 <span className="w-2 h-2 bg-analytics rounded-full animate-pulse" />
-                Software Development
+                Immediate availability
               </span>
             </div>
 
@@ -129,7 +129,7 @@ export const Hero = () => {
               </Button>
               <AnimatedBorderButton
                 href="/CV-Andrea-Piano.pdf"
-                download="Andrea-Piano-CV.pdf"
+                download="CV-Andrea-Piano.pdf"
               >
                 <Download className="w-5 h-5" />
                 Download CV
