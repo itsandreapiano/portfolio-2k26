@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect, useCallback } from "react";
+import Link from "next/link";
 import { createPortal } from "react-dom";
 import {
   Bot,
@@ -360,7 +361,7 @@ export function AIChatbot() {
                     className="
                       w-full rounded-full border border-border
                       bg-muted/40 px-5 py-3.5 text-left
-                      text-sm font-medium leading-relaxed
+                      text-sm font-semibold leading-relaxed
                       text-foreground transition-all
                       hover:border-primary/50 hover:bg-muted
                       disabled:cursor-not-allowed disabled:opacity-50
@@ -384,7 +385,7 @@ export function AIChatbot() {
               <div
                 className={`
                   min-w-0 max-w-[90%] overflow-hidden
-                  rounded-2xl px-4 py-3 text-sm leading-relaxed
+                  rounded-2xl px-4 py-3 text-base leading-relaxed
 
                   ${
                     message.role === "user"
@@ -494,16 +495,17 @@ export function AIChatbot() {
         <div className={`mx-auto ${isExpanded ? "max-w-4xl" : "max-w-full"}`}>
           {/* Privacy disclaimer */}
           <p className="mb-4 text-xs leading-relaxed text-muted-foreground">
-            You're chatting with an AI that can make mistakes. Your messages are
-            sent to Google Gemini to generate a reply. Please don't share
-            sensitive or confidential information. See the{" "}
-            <a
-              href="/privacy-policy"
+            You're chatting with an AI assistant that may occasionally make
+            mistakes. Your messages are processed by Google Gemini to generate
+            responses. For more accurate information or further questions,
+            please contact{" "}
+            <Link
+              href="mailto:itsandreapiano@gmail.com"
               className="font-medium text-foreground underline underline-offset-2 hover:text-primary"
             >
-              Privacy policy
-            </a>{" "}
-            for details.
+              itsandreapiano@gmail.com
+            </Link>{" "}
+            directly.
           </p>
 
           {/* Auto-expanding message composer */}
@@ -527,7 +529,7 @@ export function AIChatbot() {
         min-h-[48px] w-full resize-none
         overflow-y-hidden rounded-[24px]
         bg-transparent py-3 pl-4 pr-16
-        text-sm leading-6 text-foreground
+        text-base leading-6 text-foreground
         outline-none
         placeholder:text-muted-foreground
         disabled:cursor-not-allowed disabled:opacity-50
@@ -535,26 +537,26 @@ export function AIChatbot() {
               />
 
               {/* Send button inside the input */}
+
               <button
                 type="submit"
                 disabled={!canSend}
                 aria-label="Send message"
                 title="Send message"
                 className="
-        absolute bottom-2 right-2
-        flex h-9 w-9 items-center justify-center
-        rounded-full bg-primary text-primary-foreground
-        transition-all duration-200
-        hover:scale-105 hover:opacity-90
-        disabled:cursor-default
-        disabled:opacity-40
-        disabled:hover:scale-100
-      "
+    absolute bottom-1.5 right-1.5
+    flex h-10 w-10 items-center justify-center
+    rounded-full bg-primary text-primary-foreground
+    shadow-sm transition-all duration-200
+    hover:scale-105 hover:shadow-md
+    disabled:cursor-default disabled:opacity-40
+    disabled:hover:scale-100
+  "
               >
                 {isLoading ? (
-                  <Loader2 size={18} className="animate-spin" />
+                  <Loader2 size={20} className="animate-spin" />
                 ) : (
-                  <ArrowUp size={19} strokeWidth={2.5} />
+                  <ArrowUp size={22} strokeWidth={2.7} />
                 )}
               </button>
             </div>
@@ -579,23 +581,45 @@ export function AIChatbot() {
     <>
       {/* Floating launcher */}
       {!(isOpen && isExpanded) && (
-        <button
-          type="button"
-          onClick={() => setIsOpen((current) => !current)}
-          aria-label={isOpen ? "Close AI chatbot" : "Open AI chatbot"}
-          aria-expanded={isOpen}
-          className="
-            glass-strong fixed bottom-5 right-5 z-[9998]
-            flex h-11 w-11 items-center justify-center
-            rounded-full border border-border
-            text-foreground shadow-lg
-            transition-all duration-200
-            hover:scale-105 hover:text-primary
-            sm:bottom-6 sm:right-6
-          "
-        >
-          {isOpen ? <X size={20} /> : <MessageCircle size={20} />}
-        </button>
+        <div className="fixed bottom-5 right-5 z-[9998] sm:bottom-6 sm:right-6">
+          {!isOpen && (
+            <span
+              aria-hidden="true"
+              className="
+          pointer-events-none absolute inset-0
+          animate-ping rounded-full
+          bg-primary/30
+        "
+              style={{ animationDuration: "3s" }}
+            />
+          )}
+
+          <button
+            type="button"
+            onClick={() => setIsOpen((current) => !current)}
+            aria-label={isOpen ? "Close AI chatbot" : "Chat with Andrea AI"}
+            aria-expanded={isOpen}
+            title={isOpen ? "Close chatbot" : "Chat with Andrea AI"}
+            className="
+        relative flex h-[60px] w-[60px]
+        items-center justify-center
+        rounded-full border-2 border-primary/40
+        bg-primary text-primary-foreground
+        shadow-[0_4px_24px_rgba(0,0,0,0.25)]
+        transition-all duration-300
+        hover:scale-110 hover:shadow-xl
+        focus-visible:outline-2
+        focus-visible:outline-offset-4
+        focus-visible:outline-primary
+      "
+          >
+            {isOpen ? (
+              <X size={27} strokeWidth={2.2} />
+            ) : (
+              <MessageCircle size={28} strokeWidth={2.2} />
+            )}
+          </button>
+        </div>
       )}
 
       {/* Render chat directly into document.body */}
