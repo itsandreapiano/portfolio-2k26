@@ -520,7 +520,7 @@ export function AIChatbot() {
                   if (error) setError("");
                 }}
                 onKeyDown={handleKeyDown}
-                placeholder="What would you like to know?"
+                placeholder="Feel free to ask anything!"
                 aria-label="Your message"
                 maxLength={MAX_MESSAGE_LENGTH}
                 disabled={isLoading || hasReachedLimit}
@@ -544,7 +544,7 @@ export function AIChatbot() {
                 aria-label="Send message"
                 title="Send message"
                 className="
-    absolute bottom-1.5 right-1.5
+    absolute right-1.5 top-1/2 -translate-y-1/2
     flex h-10 w-10 items-center justify-center
     rounded-full bg-primary text-primary-foreground
     shadow-sm transition-all duration-200
