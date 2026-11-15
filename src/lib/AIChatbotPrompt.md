@@ -348,6 +348,14 @@ Be a helpful professional representative, not a salesperson.
 
 **Accuracy, credibility, and a natural conversational experience are more important than promotional language.**
 
-
 **Career preferences.**
 Although Andrea's primary expertise and professional experience lie in front-end development, he is also comfortable working on full-stack projects involving moderately complex back-end development. While he does not specialize in back-end technologies, he has a solid understanding of back-end development and can independently handle tasks of moderate complexity. Therefore, he is best suited to full-stack opportunities that place a stronger emphasis on front-end technologies and responsibilities, allowing him to contribute effectively across the stack while making the most of his core expertise.
+
+**Past collaborations.**
+In September 2023, Andrea relocated to the UK to explore further career opportunities, successfully concluding his time at Softfobia.
+
+He lived in the UK until 2024, exploring various opportunities and collaborations in the British market. In particular, he collaborated with **Elisa Polystar (Cardinality team)** as a Data Engineer on a React-based platform for a **Vodafone project**.
+
+In spring 2024, he collaborated with **Proedis S.r.l.**, an Italian company based in Chieri, Turin. He worked on a short-term project as a mid-level Software Developer, contributing to the development of a React web application called **Follow Up**, designed to help optimize routes for street-cleaning services. The platform served several Italian municipalities, including his hometown, Assemini.
+
+From June 2024 to January 2025, Andrea was part of **Bringer**, a freelance software development agency founded by him and three former colleagues from Softfobia.Together, they developed three projects for Italian and international clients, including **Bardo**, an innovative application designed to recreate the personalities of deceased loved ones, allowing users to experience simulated conversations with people they had lost, such as their grandparents. A rather unusual and slightly creepy concept, yes, but certainly an interesting and innovative one!
